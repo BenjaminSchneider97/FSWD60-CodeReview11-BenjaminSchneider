@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 23. Mrz 2019 um 09:30
+-- Erstellungszeit: 23. Mrz 2019 um 13:33
 -- Server-Version: 10.1.38-MariaDB
 -- PHP-Version: 7.3.2
 
@@ -125,7 +125,8 @@ CREATE TABLE `userdata` (
 INSERT INTO `userdata` (`userdata_id`, `userFirstName`, `userLastName`, `userEmail`, `userPassword`, `userAdminRole`) VALUES
 (1, 'Benjamin', 'Schneider', 'benjamin@domain.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'Y'),
 (2, 'John', 'Doe', 'john@domain.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'N'),
-(3, 'Harry', 'Potter', 'harry@domain.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'N');
+(3, 'Harry', 'Potter', 'harry@domain.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'N'),
+(4, 'Teddy', 'Bear', 'teddy@domain.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'N');
 
 --
 -- Indizes der exportierten Tabellen
@@ -169,19 +170,19 @@ ALTER TABLE `concert`
 -- AUTO_INCREMENT für Tabelle `restaurant`
 --
 ALTER TABLE `restaurant`
-  MODIFY `restaurant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `restaurant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `thingstodo`
 --
 ALTER TABLE `thingstodo`
-  MODIFY `thingsToDo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `thingsToDo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT für Tabelle `userdata`
 --
 ALTER TABLE `userdata`
-  MODIFY `userdata_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userdata_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
