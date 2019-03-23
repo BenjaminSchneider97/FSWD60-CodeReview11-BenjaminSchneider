@@ -85,6 +85,8 @@
 			<h4><a href="restaurant.php">Restaurants</a></h4>
 			<p></p>
 			<h4><a href="events.php">Events</a></h4>
+			<p></p>
+			<h4><a href="search.php">Search...</a></h4>
 			';
 			}
 

@@ -171,19 +171,25 @@ textarea{
 	width: 70%;
 	height: 150px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.searchbar{
+	height: 50px;
+	width: 100%;
+	font-size: 1.3em;
+	padding: 0 10px;
+}
+.emailFail, .emailSuccess{
+	display: flex;
+}
+.emailFail i{
+	color: #e74c3c;
+}
+.emailSuccess i{
+	color: #2ecc71;
+}
+.emailChecker{
+	font-size: 2em!important;
+	margin: auto!important;
+}
 .footer{
 	position: absolute;
 	bottom: 0;

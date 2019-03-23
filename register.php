@@ -67,6 +67,38 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('.emailSuccess').hide();
+			$('.emailFail').hide();
+
+			$('#emailCheck').keyup(useremailcheck);
+			});
+				
+			function useremailcheck(){
+				
+				var userEmail = $('#emailCheck').val();
+
+				jQuery.ajax({
+					type: "POST",
+					url: "checkEmail.php",
+					data: "userEmail=" + userEmail,
+					cache: false,
+					success: function(response){
+						console.log(response);
+						if(response > 0){
+							$('.emailFail').show();
+							$('.emailSuccess').hide();
+						}
+						else{
+							$('.emailSuccess').show();
+							$('.emailFail').hide();
+						}
+					}
+				});
+			}
+	</script>
 	<div class="navbar">
 		<p>Travel-o-matic blog</p>
 		<span class="navbar-login">
@@ -101,7 +133,9 @@
 			</div>
 			<div class="loginfield">
 				<i class="fas fa-envelope"></i>
-				<input type="text" name="userEmail"  placeholder="Email" value="<?php echo $userEmail ?>" maxlength="55" required>
+				<input id="emailCheck" type="text" name="userEmail"  placeholder="Email" value="<?php echo $userEmail ?>" maxlength="55" required>
+				<div class="emailFail"><i class="fas fa-times emailChecker"></i></div>
+				<div class="emailSuccess"><i class="fas fa-check emailChecker"></i></div>
 			</div>
 			<span><?php echo $userEmailError ?></span>
 			<div class="loginfield">
