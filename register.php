@@ -80,24 +80,31 @@
 				
 				var userEmail = $('#emailCheck').val();
 
-				jQuery.ajax({
-					type: "POST",
-					url: "checkEmail.php",
-					data: "userEmail=" + userEmail,
-					cache: false,
-					success: function(response){
-						console.log(response);
-						if(response > 0){
-							$('.emailFail').show();
-							$('.emailSuccess').hide();
+				if (isEmail(userEmail)) {
+					jQuery.ajax({
+						type: "POST",
+						url: "checkEmail.php",
+						data: "userEmail=" + userEmail,
+						cache: false,
+						success: function(response){
+							console.log(response);
+							if(response > 0){
+								$('.emailFail').show();
+								$('.emailSuccess').hide();
+							}
+							else{
+								$('.emailSuccess').show();
+								$('.emailFail').hide();
+							}
 						}
-						else{
-							$('.emailSuccess').show();
-							$('.emailFail').hide();
-						}
-					}
-				});
+					});
+				}
+
+			function isEmail(email) {
+				var isemail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				return isemail.test(email);
 			}
+		}
 	</script>
 	<div class="navbar">
 		<p>Travel-o-matic blog</p>
