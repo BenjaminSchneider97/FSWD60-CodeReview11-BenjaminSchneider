@@ -681,8 +681,93 @@
 				?>
 
 			</div>
+			<h1>Map with locations</h1>
+				<hr>
 		</div>
 	</div>
+   <div id="map"></div>
+   <script>
+	function initMap() {
+     	var Naschmarkt = {lat: 48.198409, lng: 16.3609278};
+    	var Stadthalle = {lat: 48.2023646, lng: 16.3307072};
+    	var Rinderwahn = {lat: 48.1986157, lng: 16.3611352};
+    	var AsiaJasmin = {lat: 48.2506594, lng: 16.4703394};
+    	var Schoenbrunn = {lat: 48.1817271, lng: 16.3016802};
+    	var CharlesChurch = {lat: 48.2011828, lng: 16.3673226};
+    	var Prater = {lat: 48.2164699, lng: 16.3969051};
+    	var Donauzentrum = {lat: 48.2423644, lng: 16.4328016};
+    	var LemonLeafThai = {lat: 48.1959985, lng: 16.3575996};
+    	var sixta = {lat: 48.1940169, lng: 16.3574611};
+
+    	var map = new google.maps.Map(document.getElementById('map'), {
+    		zoom: 11.5,
+    		center: {lat: 48.2211394, lng: 16.3773116}
+    	});
+
+    	var marker = new google.maps.Marker({
+    		position: Naschmarkt,
+        	map: map,
+        	title: 'Vienna Naschmarkt'
+    	});
+
+    	var marker2 = new google.maps.Marker({
+       		position: Stadthalle,
+       		map: map,
+       		title: 'Stadthalle'
+    	});
+
+    	var marker3 = new google.maps.Marker({
+       		position: Rinderwahn,
+       		map: map,
+       		title: 'Rinderwahn'
+    	});
+
+    	var marker4 = new google.maps.Marker({
+       		position: AsiaJasmin,
+       		map: map,
+       		title: 'Asia Jasmin'
+    	});
+
+    	var marker5 = new google.maps.Marker({
+       		position: Schoenbrunn,
+       		map: map,
+       		title: 'Schönbrunn'
+    	});
+
+    	var marker6 = new google.maps.Marker({
+       		position: CharlesChurch,
+       		map: map,
+       		title: 'Charles Church'
+    	});
+
+    	var marker7 = new google.maps.Marker({
+       		position: Prater,
+       		map: map,
+       		title: 'Prater'
+    	});
+
+    	var marker8 = new google.maps.Marker({
+       		position: Donauzentrum,
+       		map: map,
+       		title: 'Donauzentrum'
+    	});
+
+    	var marker9 = new google.maps.Marker({
+       		position: LemonLeafThai,
+       		map: map,
+       		title: 'Lemon Leaf Thai'
+    	});
+
+    	var marker10 = new google.maps.Marker({
+       		position: sixta,
+       		map: map,
+       		title: 'SIXTA'
+    	});
+     }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+   </script>
 	<div class="footer">
 		<p>Benjamin Schneider - CodeFactory 2019</p>
 	</div>

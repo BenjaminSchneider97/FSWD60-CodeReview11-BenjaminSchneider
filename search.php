@@ -74,62 +74,42 @@
 		</div>
 		<div id="content">
 			<script>
-			// Variable to hold request
-			var request;
+				var request;
 
-			// Bind to the submit event of our form
-			$("#test").keyup(function(event){
+				$("#test").keyup(function(event){
 
-			   // Prevent default posting of form - put here to work in case of errors
-			   event.preventDefault();
+				   event.preventDefault();
 
-			   // Abort any pending request
-			   if (request) {
-			       request.abort();
-			   }
-			   // setup some local variables
-			   var $form = $(this);
+				   if (request) {
+				       request.abort();
+				   }
 
-			   // Let's select and cache all the fields
-			   var $inputs = $form.find("input, select, button, textarea");//JULAN - always name all to be safe
+				   var $form = $(this);
 
-			   // Serialize the data in the form
-			   var serializedData = $form.serialize();
+				   var $inputs = $form.find("input, select, button, textarea");
 
-			   // Let's disable the inputs for the duration of the Ajax request.
-			   // Note: we disable elements AFTER the form data has been serialized.
-			   // Disabled form elements will not be serialized.
-			   $inputs.prop("disabled", true);
+				   var serializedData = $form.serialize();
 
-			   // Fire off the request to /form.php ->JULAN or the php file you are working on
-			   request = $.ajax({
-			       url: "searchdata.php",
-			       type: "post",
-			       data: serializedData
-			   });
+				   $inputs.prop("disabled", true);
 
-			   // Callback handler that will be called on success
-			   request.done(function (response, textStatus, jqXHR){
-			       // Log a message to the console
-			        document.getElementById("content").innerHTML=response;
-			     });
+				   request = $.ajax({
+				       url: "searchdata.php",
+				       type: "post",
+				       data: serializedData
+				   });
 
-			   // Callback handler that will be called on failure
-			   request.fail(function (jqXHR, textStatus, errorThrown){
-			       // Log the error to the console
-			       /*console.error(
-			           "The following error occurred: "+
-			           textStatus, errorThrown,jqXHR
-			       );*/
-			   });
+				   request.done(function (response, textStatus, jqXHR){
 
-			   // Callback handler that will be called regardless
-			   // if the request failed or succeeded
-			   request.always(function () {
-			       // Reenable the inputs
-			       $inputs.prop("disabled", false);
-			   });
-			});
+				        document.getElementById("content").innerHTML=response;
+				     });
+
+				   request.fail(function (jqXHR, textStatus, errorThrown){
+				   });
+
+				   request.always(function () {
+				       $inputs.prop("disabled", false);
+				   });
+				});
 			</script>
 		</div>
 	</div>

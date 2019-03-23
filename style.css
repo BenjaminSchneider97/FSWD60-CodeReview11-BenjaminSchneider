@@ -190,6 +190,11 @@ textarea{
 	font-size: 2em!important;
 	margin: auto!important;
 }
+#map{
+    height: 425px;
+    width: 50%;
+    margin: 0 auto;
+}
 .footer{
 	position: absolute;
 	bottom: 0;
