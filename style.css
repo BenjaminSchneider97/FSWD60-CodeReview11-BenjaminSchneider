@@ -19,6 +19,18 @@ body{
 	padding: 0;
 	margin: 6px 15px;
 }
+.navbar a{
+	color: #fff;
+}
+.navbar h4{
+	color: #fff;
+	padding: 0;
+	margin: auto 0;
+}
+.navbar > p > a{
+	text-decoration: none;
+	border: none;
+}
 .navbar-login{
 	right: 15px;
 	margin: auto 25px auto auto;

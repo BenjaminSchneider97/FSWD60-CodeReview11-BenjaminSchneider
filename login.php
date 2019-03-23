@@ -77,7 +77,18 @@
 </head>
 <body>
 	<div class="navbar">
-		<p>Travel-o-matic blog</p>
+		<p><a href="home.php">Travel-o-matic blog</a></p>
+		<?php
+
+			if(isset($_SESSION['user']) || isset($_SESSION['admin'])){
+				echo '
+			<h4><a href="restaurant.php">Restaurants</a></h4>
+			<p></p>
+			<h4><a href="events.php">Events</a></h4>
+			';
+			}
+
+		?>
 		<span class="navbar-login">
 			<a href="login.php" title=" <?php echo $log ?>">
 			<?php
