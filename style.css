@@ -1,0 +1,186 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body{
+	margin-bottom: 115px;
+	font-family: 'Roboto', sans-serif;
+}
+.navbar{
+	display: flex;
+	border-radius: 0;
+	background-color: #222;
+	border: none;
+	margin: 0;
+}
+.navbar p{
+	color: #fff;
+	font-size: 2em;
+	padding: 0;
+	margin: 6px 15px;
+}
+.navbar-login{
+	right: 15px;
+	margin: auto 25px auto auto;
+	font-size: 1.3em;
+}
+.navbar-login a, .navbar-login .fas{
+	color: #fff;
+}
+.navbar-login a:hover{
+	text-decoration: none;
+}
+.slide{
+	width: 100%;
+	height: 650px;
+	animation: slide 30s ease-in-out infinite;
+	background-size: 100% 100%;
+}
+@keyframes slide{
+	0%{
+		background-image: url("img/slide3.jpeg");
+	}
+	25%{
+		background-image: url("img/slide1.jpg");
+	}
+	50%{
+		background-image: url("img/slide4.jpg");
+	}
+	75%{
+		background-image: url("img/slide2.jpg");
+	}
+	100%{
+		background-image: url("img/slide3.jpeg");
+	}
+}
+.pageheader, .successmessage h3, .centermepls, .cardName{
+	text-align: center;
+}
+hr{
+	margin-top: 0;
+	border-color: #222; 
+}
+.loginform, .logoutbox{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	margin: 0 auto;
+}
+.loginform input{
+	height: 50px;
+}
+.loginform p{
+	text-align: center;
+}
+.loginfield{
+	border-bottom: 1px solid #222;
+	display: flex;
+	margin: 15px 0;
+}
+.loginfield i{
+	margin: auto;
+	color: #222;
+	font-size: 1.5em;
+}
+.loginfield input{
+	font-size: 1.2em;
+	padding-left: 15px;
+	height: 50px;
+	width: 95%;
+	float: right;
+	outline: none;
+	background: none;
+	border: none;
+}
+.loginbutton{
+	margin: 15px 0;
+}
+.createaccountlink{
+	color: #1e3799;
+	border-bottom: 1px solid #1e3799;
+}
+.createaccountlink:hover{
+	text-decoration: none;
+	color: #74b9ff;
+	border-color: #74b9ff;
+}
+.mainpageback{
+	font-size: 1.5em;
+	color: #222;
+	margin: 10px 0;
+}
+.row{
+	margin-bottom: 25px;
+}
+.cardImage img{
+	width: 100%;
+	height: 175px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+.fasdesc{
+	margin: 10px 10px 5px 0;
+	font-size: 1.5em;
+}
+.rowdesc{
+	display: flex;
+}
+.create{
+	margin: auto 10px auto auto;
+}
+.btn{
+	height: 40px;
+}
+.changeButtons{
+	display: flex;
+	justify-content: space-around;
+}
+.changeform{
+	width: 40%;
+}
+.change{
+	width: 100%;
+}
+.modal{
+	text-align: center;
+}
+.modal-body input{
+	width: 70%;
+	font-size: 1.3em;
+	height: 50px;
+	margin: 0 0 10px 0;
+}
+textarea{
+	font-size: 1.3em;
+	width: 70%;
+	height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	background-color: #222;
+	height: 100px;
+}
+.footer p{
+	color: #fff;
+	margin: auto;
+}
